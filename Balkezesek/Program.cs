@@ -24,6 +24,18 @@ namespace Balkezesek
             játékosok.Where(x => x.UtolsóMeccs.Year == 1999 && x.UtolsóMeccs.Month == 10)
                 .ToList().ForEach(x => Console.WriteLine($"\t{x.Név}, {x.MagasságCm:0.0} cm"));
 
+            //5.
+            Console.WriteLine($"5. feladat:");
+            Console.Write($"Kérek egy 1990 és 1999 közötti évszámot!: ");
+            int év = int.Parse(Console.ReadLine());
+            while (év < 1990 || év > 1999)
+            {
+                Console.Write($"Hibás adat, kérek egy 1990 és 1999 közötti évszámot!: ");
+                év = int.Parse(Console.ReadLine());
+            }
+
+            
+            
             Console.ReadKey();
         }
     }
