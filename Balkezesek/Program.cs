@@ -19,6 +19,11 @@ namespace Balkezesek
 
             Console.WriteLine($"3. feladat: {játékosok.Count}");
 
+            //4.
+            Console.WriteLine($"4. feladat:");
+            játékosok.Where(x => x.UtolsóMeccs.Year == 1999 && x.UtolsóMeccs.Month == 10)
+                .ToList().ForEach(x => Console.WriteLine($"\t{x.Név}, {x.MagasságCm:0.0} cm"));
+
             Console.ReadKey();
         }
     }
