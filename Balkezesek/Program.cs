@@ -34,7 +34,10 @@ namespace Balkezesek
                 év = int.Parse(Console.ReadLine());
             }
 
-            
+            //6.
+            double átlagSúly = játékosok.Where(x => x.ElsőMeccs.Year <= év && x.UtolsóMeccs.Year >= év)
+                .Average(x => x.SúlyFont);
+            Console.WriteLine($"6. feladat: {átlagSúly:0.00} font");
             
             Console.ReadKey();
         }
